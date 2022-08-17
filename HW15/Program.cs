@@ -4,5 +4,13 @@
 // 7 -> да
 // 1 -> нет
 
-Console.WriteLine("Введите число ");
+// Не понял я, как сделать через метод...Какая-то каша.
+// Сделал задачу в лоб. 
+
+Console.WriteLine("Введите число дня недели");
 int num = Convert.ToInt32(Console.ReadLine());
+if (num >= 6 && num <= 7)
+{
+    Console.WriteLine("Да");
+}
+else Console.WriteLine("Нет");
