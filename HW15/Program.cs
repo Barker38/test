@@ -3,3 +3,6 @@
 // 6 -> да
 // 7 -> да
 // 1 -> нет
+
+Console.WriteLine("Введите число ");
+int num = Convert.ToInt32(Console.ReadLine());
