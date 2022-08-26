@@ -1,6 +1,8 @@
-﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+﻿// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях (индексах).
 
-// [345, 897, 568, 234] -> 2
+// [3, 7, 23, 12] -> 19
+
+// [-4, -6, 89, 6] -> 0
 
 int[] CreateArrayRndInt(int size) //Генерируем массив рандомных чисел
 {
@@ -15,16 +17,16 @@ int[] CreateArrayRndInt(int size) //Генерируем массив рандо
 
 
 
-int CountNumbers(int[] array) //Находим четные числа в массиве
+int SumNumbers(int[] array) //Находим нечетные индекс, кладекм в sum
 {
-    int count = 0;
+    int sum = 0;
 
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 == 0) count++;
+        if (i % 2 != 0) sum += array[i];
 
     }
-    return count;
+    return sum;
 }
 
 void PrintArray(int[] array) //Вывод массива
@@ -40,7 +42,7 @@ void PrintArray(int[] array) //Вывод массива
 }
 
 int[] arr = CreateArrayRndInt(5);
-int resultnumbers = CountNumbers(arr);
+int resultnumbers = SumNumbers(arr);
 
 PrintArray(arr);
 Console.Write($" -> {resultnumbers}");
