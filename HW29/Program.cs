@@ -7,16 +7,20 @@ int[] arr = new int[8];
 void FillArray(int elem, int[] array)
 {
     Console.Write($"[");
-    for (int i = 0; i < elem - 1; i++)
+    for (int i = 0; i < elem; i++)
     {
-        array[i] = new Random().Next(0, 100);
+        array[i] = new Random().Next(100, 999);
         Console.Write($"{array[i]}");
         Console.Write($",");
 
     }
     Console.Write($"]");
 }
-FillArray(9, arr);
+
+FillArray(4, arr);
+
+
+
 
 
 
